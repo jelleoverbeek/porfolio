@@ -4,24 +4,24 @@ const sass = require('gulp-sass');
 const twig = require('gulp-twig');
 
 gulp.task('sass', function () {
-    return gulp.src('./src/assets/scss/**/*.scss')
+    return gulp.src('./assets/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./build/assets/css'));
 });
 
 gulp.task('img', function () {
-    return gulp.src('./src/assets/img/**/*')
+    return gulp.src('./assets/img/**/*')
         .pipe(gulp.dest('./build/assets/img'))
 });
 
 gulp.task('js', function () {
-    return gulp.src('./src/assets/js/**/*')
+    return gulp.src('./assets/js/**/*')
         .pipe(gulp.dest('./build/assets/img'))
 });
 
 gulp.task('twig', function () {
     const files = [
-        "./src/assets/twig/index.twig"
+        "./assets/twig/index.twig"
     ];
 
     return gulp.src(files)
@@ -32,7 +32,7 @@ gulp.task('twig', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./src/assets/**/*', ['build']);
+    gulp.watch('./assets/**/*', ['build']);
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig']);
