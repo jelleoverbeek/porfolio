@@ -1,7 +1,7 @@
 'use strict';
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const webserver = require('gulp-webserver');
+const twig = require('gulp-twig');
 
 gulp.task('sass', function () {
     return gulp.src('./src/assets/scss/**/*.scss')
@@ -9,16 +9,31 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./build/assets/css'));
 });
 
-gulp.task('sass:watch', function () {
-    gulp.watch('./src/assets/scss/**/*.scss', ['sass']);
+gulp.task('img', function () {
+    return gulp.src('./src/assets/img/**/*')
+        .pipe(gulp.dest('./build/assets/img'))
 });
 
-gulp.task('webserver', function() {
-    gulp.src('./')
-        .pipe(webserver({
-            open: true
-        }));
+gulp.task('js', function () {
+    return gulp.src('./src/assets/js/**/*')
+        .pipe(gulp.dest('./build/assets/img'))
 });
 
-gulp.task('default', ['sass']);
-gulp.task('build', ['sass']);
+gulp.task('twig', function () {
+    const files = [
+        "./src/assets/twig/index.twig"
+    ];
+
+    return gulp.src(files)
+        .pipe(twig({
+            data: {}
+        }))
+        .pipe(gulp.dest('./build/'));
+});
+
+gulp.task('watch', function () {
+    gulp.watch('./src/assets/**/*', ['build']);
+});
+
+gulp.task('default', ['sass', 'js', 'img', 'twig']);
+gulp.task('build', ['sass', 'js', 'img', 'twig']);
