@@ -1,18 +1,27 @@
+html {
+    font-family: "Roboto", Arial, sans-serif;
+    color: map_get($colors, black)
+}
+
 body {
+    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-
+    font-size: rem(40);
+    font-weight: 500;
 }
 
 h2 {
-
+    font-size: rem(36);
+    font-weight: 500;
 }
 
 h3 {
-
+    font-size: rem(32);
+    font-weight: 500;
 }
 
 h4 {
@@ -29,17 +38,23 @@ h6 {
 
 p {
     margin: 0;
+    max-width: rem(760);
 
     & + p {
         margin-top: rem(8);
     }
 }
 
+.paragraph-big {
+    font-size: rem(24);
+    line-height: 1.6;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: rem(0);
 
     & + p, & + ul, & + ol {
-        margin-top: rem(8);
+        margin-top: rem(32);
     }
 }
 
@@ -53,10 +68,23 @@ ul, ol {
 }
 
 a {
+    color: map_get($colors, blue);
+    text-decoration: none;
 
+    @include transition();
+
+    &:hover,
+    &:focus {
+        color: darken(map_get($colors, blue), 5%);
+    }
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+section {
+    max-width: rem(1024);
+    margin: 0 auto;
 }

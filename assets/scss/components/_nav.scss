@@ -1,0 +1,21 @@
+nav {
+    background: #FFFFFF;
+    border-bottom: map_get($borders, default);
+    box-shadow: map_get($shadows, default);
+    padding: rem(16) 0;
+
+    & + section {
+        margin-top: rem(72);
+    }
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    font-size: rem(18);
+    padding: 0;
+
+    li {
+        margin-right: rem(24);
+    }
+}
