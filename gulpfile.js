@@ -16,7 +16,7 @@ gulp.task('img', function () {
 
 gulp.task('js', function () {
     return gulp.src('./assets/js/**/*')
-        .pipe(gulp.dest('./build/assets/img'))
+        .pipe(gulp.dest('./build/assets/js'))
 });
 
 gulp.task('twig', function () {

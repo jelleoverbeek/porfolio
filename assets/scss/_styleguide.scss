@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: rem(0);
 
     & + p, & + ul, & + ol {
-        margin-top: rem(32);
+        margin-top: rem(16);
     }
 }
 

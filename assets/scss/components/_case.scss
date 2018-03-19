@@ -1,0 +1,31 @@
+.case {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: rem(126);
+}
+
+.case:nth-child(even) {
+    .case__preview {
+        order: 1;
+    }
+
+    .case__content {
+        margin-left: 0;
+        margin-right: rem(64);
+    }
+}
+
+.case__preview {
+    border-radius: map_get($border-radius, default);
+    box-shadow: 0 -3px 18px 0 rgba(17,26,34,0.22);
+}
+
+.case__content {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(408);
+    margin-left: rem(40);
+    font-size: rem(22);
+    line-height: 1.4;
+}

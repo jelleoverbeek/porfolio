@@ -3,16 +3,20 @@ nav {
     border-bottom: map_get($borders, default);
     box-shadow: map_get($shadows, default);
     padding: rem(16) 0;
+    font-size: rem(18);
 
     & + section {
         margin-top: rem(72);
     }
 }
 
+p + .navigation {
+    margin-top: rem(24);
+}
+
 .navigation {
     list-style: none;
     display: flex;
-    font-size: rem(18);
     padding: 0;
 
     li {
