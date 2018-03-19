@@ -39,5 +39,5 @@ gulp.task('watch', function () {
     gulp.watch('./assets/**/*', ['default']);
 });
 
-gulp.task('default', ['sass', 'js', 'img', 'twig']);
-gulp.task('build', ['sass', 'js', 'img', 'twig']);
+gulp.task('default', ['sass', 'js', 'img', 'twig', 'video']);
+gulp.task('build', ['sass', 'js', 'img', 'twig', 'video']);
