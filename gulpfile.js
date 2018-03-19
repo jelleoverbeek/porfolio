@@ -21,18 +21,17 @@ gulp.task('js', function () {
 
 gulp.task('twig', function () {
     const files = [
-        "./assets/twig/index.twig"
+        "./assets/twig/index.twig",
+        "./assets/twig/work.twig"
     ];
 
     return gulp.src(files)
-        .pipe(twig({
-            data: {}
-        }))
+        .pipe(twig())
         .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./assets/**/*', ['build']);
+    gulp.watch('./assets/**/*', ['default']);
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig']);

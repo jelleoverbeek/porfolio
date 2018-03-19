@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>frontend-design</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="45" cy="3" r="3"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <circle id="path-3" cx="3" cy="3" r="3"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="frontend-design">
+            <g id="front-end/design" transform="translate(1.000000, 10.000000)">
+                <g id="code" transform="translate(13.000000, 17.000000)" stroke-linecap="square" stroke-width="3" stroke="#5784FF">
+                    <polyline id="Path-7-Copy" transform="translate(18.500000, 7.000000) scale(-1, 1) translate(-18.500000, -7.000000) " points="22 0 15 7 22 14"></polyline>
+                    <polyline id="Path-7-Copy-2" points="7 0 0 7 7 14"></polyline>
+                </g>
+                <g id="curve">
+                    <circle id="Oval-3" fill="#313131" cx="45" cy="24" r="2"></circle>
+                    <circle id="Oval-3-Copy" fill="#313131" cx="3" cy="24" r="2"></circle>
+                    <path d="M45,24 C45,12.4020203 35.5979797,3 24,3 C12.4020203,3 3,12.4020203 3,24" id="Oval-8" stroke="#313131" stroke-width="2"></path>
+                    <g id="Group" stroke="#5784FF">
+                        <path d="M5,3.03997803 L43,3 L5,3.03997803 Z" id="Path-9" stroke-width="2" stroke-linecap="round"></path>
+                        <use id="Oval-2" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                        <use id="Oval-2-Copy" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

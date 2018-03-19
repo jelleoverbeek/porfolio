@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>small-books</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,13.5 C0,11.0147186 2.00492334,9 4.5019952,9 L42.9983277,9 C43.551536,9 44,9.4463114 44,9.99754465 L44,17.0024554 C44,17.553384 43.5501844,18 42.9983277,18 L4.5019952,18 C2.01561191,18 0,15.9802243 0,13.5 L0,13.5 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="44" height="9" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M6,4.5 C6,2.01471863 8.01621534,0 10.5083225,0 L43.0031246,0 C43.5536837,0 44,0.446311399 44,0.997544646 L44,8.00245535 C44,8.55338405 43.5467697,9 43.0031246,9 L10.5083225,9 C8.01844473,9 6,6.98022433 6,4.5 L6,4.5 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="38" height="9" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="small-books">
+            <g transform="translate(3.000000, 16.000000)" id="book">
+                <g>
+                    <use id="Rectangle-12" stroke="#323232" mask="url(#mask-2)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <use id="Rectangle-12-Copy" stroke="#7C7C7C" mask="url(#mask-4)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-3"></use>
+                    <path d="M6.49647905,13.5 L42,13.5" id="Path-6" stroke="#D3D3D3"></path>
+                    <path d="M11,4.5 L42,4.5" id="Path-6-Copy" stroke="#D3D3D3"></path>
+                    <polygon id="Rectangle-4" fill="#5784FF" points="15 4 23 4 23 15 18.9973958 12.8 15 15"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

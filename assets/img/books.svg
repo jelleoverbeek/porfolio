@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>books</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,22.5 C0,20.0147186 2.00492334,18 4.5019952,18 L42.9983277,18 C43.551536,18 44,18.4463114 44,18.9975446 L44,26.0024554 C44,26.553384 43.5501844,27 42.9983277,27 L4.5019952,27 C2.01561191,27 0,24.9802243 0,22.5 L0,22.5 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="44" height="9" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M6,13.5 C6,11.0147186 8.01621534,9 10.5083225,9 L43.0031246,9 C43.5536837,9 44,9.4463114 44,9.99754465 L44,17.0024554 C44,17.553384 43.5467697,18 43.0031246,18 L10.5083225,18 C8.01844473,18 6,15.9802243 6,13.5 L6,13.5 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="38" height="9" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <path d="M2,4.5 C2,2.01471863 4.01621534,0 6.50832248,0 L39.0031246,0 C39.5536837,0 40,0.446311399 40,0.997544646 L40,8.00245535 C40,8.55338405 39.5467697,9 39.0031246,9 L6.50832248,9 C4.01844473,9 2,6.98022433 2,4.5 L2,4.5 Z" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="38" height="9" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="books">
+            <g transform="translate(3.000000, 12.000000)">
+                <use id="Rectangle-12" stroke="#7C7C7C" mask="url(#mask-2)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <use id="Rectangle-12-Copy" stroke="#313131" mask="url(#mask-4)" stroke-width="4" fill="#FFFFFF" transform="translate(25.000000, 13.500000) scale(-1, 1) translate(-25.000000, -13.500000) " xlink:href="#path-3"></use>
+                <path d="M6.49647905,22.5 L42,22.5" id="Path-6" stroke="#D3D3D3"></path>
+                <use id="Rectangle-12-Copy-2" stroke="#7C7C7C" mask="url(#mask-6)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-5"></use>
+                <path d="M8,13.5 L39,13.5" id="Path-6-Copy" stroke="#D3D3D3"></path>
+                <path d="M7,4.5 L38,4.5" id="Path-6-Copy-2" stroke="#D3D3D3"></path>
+                <polygon id="Rectangle-4" fill="#5784FF" points="27 13 35 13 35 24 30.9973958 21.8 27 24"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

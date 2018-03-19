@@ -77,6 +77,11 @@ a {
     &:focus {
         color: darken(map_get($colors, blue), 5%);
     }
+
+    &.active,
+    &.disabled {
+        color: map_get($colors, black);
+    }
 }
 
 img {
