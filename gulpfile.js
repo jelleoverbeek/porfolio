@@ -14,6 +14,11 @@ gulp.task('img', function () {
         .pipe(gulp.dest('./build/assets/img'))
 });
 
+gulp.task('video', function () {
+    return gulp.src('./assets/video/**/*')
+        .pipe(gulp.dest('./build/assets/video'))
+});
+
 gulp.task('js', function () {
     return gulp.src('./assets/js/**/*')
         .pipe(gulp.dest('./build/assets/js'))

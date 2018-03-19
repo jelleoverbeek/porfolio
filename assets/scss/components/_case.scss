@@ -1,8 +1,14 @@
 .case {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: rem(126);
+}
+
+.case--mobile {
+    .case__preview {
+        max-width: rem(320);
+    }
 }
 
 .case:nth-child(even) {
