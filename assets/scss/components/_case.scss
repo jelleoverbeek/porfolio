@@ -1,15 +1,24 @@
 .case-wrapper {
     max-width: none;
-    margin-top: rem(102);
 }
 
 .case {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: rem(126) rem(32);
+    margin-top: rem(126);
+    padding: rem(126) rem(32) 0 rem(32);
     border-top: map_get($borders, default);
     width: 100%;
+
+    @include max-tablet-portrait() {
+        margin-top: rem(80);
+        padding: rem(80) rem(32) 0 rem(32);
+    }
+
+    @include max-mobile() {
+        flex-wrap: wrap;
+    }
 }
 
 .case--mobile {
@@ -21,6 +30,14 @@
 .case__preview {
     border-radius: map_get($border-radius, default);
     box-shadow: 0 rem(2) rem(24) 0 rgba(17,26,34,0.15);
+
+    @include max-tablet-landscape() {
+        width: 55%;
+    }
+
+    @include max-mobile() {
+        width: 100%;
+    }
 }
 
 .case__content {
@@ -30,4 +47,13 @@
     margin-left: rem(56);
     line-height: 1.4;
     font-size: rem(20);
+
+    @include max-tablet-landscape() {
+        width: 45%;
+    }
+
+    @include max-mobile() {
+        width: 100%;
+        margin-left: 0;
+    }
 }
