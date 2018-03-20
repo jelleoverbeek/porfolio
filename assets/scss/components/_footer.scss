@@ -1,0 +1,39 @@
+footer {
+    background-color: map_get($colors, blueish-bg);
+    padding: rem(40) 0;
+    margin-top: rem(126);
+
+    a {
+        color: #6F7E89;
+
+        &:hover {
+            color: darken(#6F7E89, 10%);
+        }
+    }
+}
+
+.footer__section {
+    display: flex;
+    justify-content: space-between;
+
+    @include max-mobile() {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer__social {
+    @include max-mobile() {
+        margin-top: rem(16)
+    }
+}
+
+.footer__social-icon {
+    opacity: 0.5;
+    margin-left: rem(8);
+    @include transition();
+
+    &:hover {
+        opacity: 1;
+    }
+}

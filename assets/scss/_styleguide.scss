@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: "Roboto", Arial, sans-serif;
     color: map_get($colors, black)
@@ -94,4 +98,8 @@ img {
 section {
     max-width: map_get($container-widths, default);
     margin: 0 auto;
+
+    @include max-tablet-landscape() {
+        padding: 0 rem(40);
+    }
 }
