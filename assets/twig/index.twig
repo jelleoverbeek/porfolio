@@ -5,15 +5,24 @@
 
     <section>
         <h1>Hi!</h1>
-        <p>I’m Jelle Overbeek, a designer and front-end developer from the Netherlands. Currently I’m working for Recognize and studying Communication and Multimedia Design at the Amsterdam University of Applied Sciences.</p>
-        <ul class="navigation navigation--big">
-            <li><a href="home.html#work">My work</a></li>
-            <li><a href="about.html">More about me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+
+        <div class="flex col-100">
+            <div class="col-70">
+                <p>I’m Jelle Overbeek, a designer and front-end developer from the Netherlands. Currently I’m working for Recognize and studying Communication and Multimedia Design at the Amsterdam University of Applied Sciences.</p>
+                <ul class="navigation navigation--big">
+                    <li><a href="#work">My work</a></li>
+                    <li><a href="about.html">More about me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-30 align-center">
+                <img src="assets/img/avatar.png" srcset="assets/img/avatar.png 1x, assets/img/avatar@2x.png 2x" class="avatar">
+            </div>
+        </div>
     </section>
 
-    <section class="case-wrapper">
+    <section class="case-wrapper" id="work">
 
         <article class="case case--mobile">
             <video class="case__preview" src="assets/video/spacerace.mp4" autoplay loop>

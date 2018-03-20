@@ -26,4 +26,8 @@ p + .navigation {
 
 .navigation--big {
     font-size: rem(20);
+
+    li {
+        margin-right: rem(32);
+    }
 }
