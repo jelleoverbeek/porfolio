@@ -9,3 +9,42 @@
 .align-right {
     text-align: right;
 }
+
+.flex {
+    display: flex;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-justify-end {
+    justify-content: flex-end;
+}
+
+.col-100 {
+    width: 100%;
+}
+
+.col-30 {
+    width: 30%;
+}
+
+.col-70 {
+    width: 70%;
+}
+
+@include max-tablet-portrait() {
+    .flex {
+        flex-wrap: wrap-reverse;
+    }
+
+    .col-30 {
+        margin-bottom: rem(16);
+        width: 100%;
+    }
+
+    .col-70 {
+        width: 100%;
+    }
+}

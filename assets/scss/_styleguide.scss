@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: "Roboto", Arial, sans-serif;
     color: map_get($colors, black)
@@ -10,17 +14,18 @@ body {
 }
 
 h1 {
-    font-size: rem(40);
+    font-size: rem(36);
     font-weight: 500;
+    margin-bottom: rem(24);
 }
 
 h2 {
-    font-size: rem(36);
+    font-size: rem(32);
     font-weight: 500;
 }
 
 h3 {
-    font-size: rem(32);
+    font-size: rem(24);
     font-weight: 500;
 }
 
@@ -39,18 +44,20 @@ h6 {
 p {
     margin: 0;
     max-width: rem(760);
+    font-size: rem(20);
+    line-height: 1.6;
 
     & + p {
         margin-top: rem(8);
     }
+
+    @include max-tablet-portrait() {
+        font-size: rem(18);
+        line-height: 1.4;
+    }
 }
 
-.paragraph-big {
-    font-size: rem(24);
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     margin-bottom: rem(0);
 
     & + p, & + ul, & + ol {
@@ -89,7 +96,20 @@ img {
     height: auto;
 }
 
+.avatar {
+    border-radius: rem(180);
+}
+
 section {
-    max-width: rem(1024);
+    max-width: map_get($container-widths, default);
     margin: 0 auto;
+
+    @include max-tablet-landscape() {
+        padding: 0 rem(32);
+    }
+
+    @include max-tablet-portrait() {
+        padding: 0 rem(24);
+    }
+
 }
