@@ -3,9 +3,9 @@ $browser-context: 16; // Default browser font size
     @return #{$pixels/$context}rem;
 }
 
-$max-mobile: 560px;
-$max-tablet-portrait: 760px;
-$max-tablet-landscape: 1088px;
+$max-mobile: rem(480);
+$max-tablet-portrait: rem(720);
+$max-tablet-landscape: rem(1088);
 
 @mixin max-tablet-landscape() {
     @media (max-width: $max-tablet-landscape) {

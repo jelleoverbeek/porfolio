@@ -33,3 +33,18 @@
 .col-70 {
     width: 70%;
 }
+
+@include max-tablet-portrait() {
+    .flex {
+        flex-wrap: wrap-reverse;
+    }
+
+    .col-30 {
+        margin-bottom: rem(16);
+        width: 100%;
+    }
+
+    .col-70 {
+        width: 100%;
+    }
+}

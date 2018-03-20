@@ -21,6 +21,19 @@ p + .navigation {
 
     li {
         margin-right: rem(24);
+        white-space: nowrap;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @include max-mobile() {
+        flex-direction: column;
+
+        li {
+            margin-top: rem(8);
+        }
     }
 }
 
@@ -29,5 +42,9 @@ p + .navigation {
 
     li {
         margin-right: rem(32);
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
