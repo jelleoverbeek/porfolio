@@ -50,6 +50,11 @@ p {
     & + p {
         margin-top: rem(8);
     }
+
+    @include max-tablet-portrait() {
+        font-size: rem(18);
+        line-height: 1.4;
+    }
 }
 
 h2, h3, h4, h5, h6 {
@@ -100,6 +105,11 @@ section {
     margin: 0 auto;
 
     @include max-tablet-landscape() {
-        padding: 0 rem(40);
+        padding: 0 rem(32);
     }
+
+    @include max-tablet-portrait() {
+        padding: 0 rem(24);
+    }
+
 }

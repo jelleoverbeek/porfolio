@@ -1,5 +1,6 @@
 .case-wrapper {
     max-width: none;
+    padding: 0;
 }
 
 .case {
@@ -14,10 +15,13 @@
     @include max-tablet-portrait() {
         margin-top: rem(80);
         padding: rem(80) rem(32) 0 rem(32);
+        flex-wrap: wrap;
     }
 
+
     @include max-mobile() {
-        flex-wrap: wrap;
+        margin-top: rem(56);
+        padding: rem(56) rem(24) 0 rem(24);
     }
 }
 
@@ -32,10 +36,10 @@
     box-shadow: 0 rem(2) rem(24) 0 rgba(17,26,34,0.15);
 
     @include max-tablet-landscape() {
-        width: 55%;
+        width: 52%;
     }
 
-    @include max-mobile() {
+    @include max-tablet-portrait() {
         width: 100%;
     }
 }
@@ -49,11 +53,11 @@
     font-size: rem(20);
 
     @include max-tablet-landscape() {
-        width: 45%;
+        width: 48%;
     }
 
-    @include max-mobile() {
+    @include max-tablet-portrait() {
+        margin: rem(16) 0 0 0;
         width: 100%;
-        margin-left: 0;
     }
 }
