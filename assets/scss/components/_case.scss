@@ -1,8 +1,14 @@
+.case-wrapper {
+    max-width: none;
+    margin-top: rem(102);
+}
+
 .case {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: rem(126);
+    padding: rem(126) rem(32);
+    border-top: map_get($borders, default);
 }
 
 .case--mobile {
@@ -11,27 +17,16 @@
     }
 }
 
-.case:nth-child(even) {
-    .case__preview {
-        order: 1;
-    }
-
-    .case__content {
-        margin-left: 0;
-        margin-right: rem(64);
-    }
-}
-
 .case__preview {
     border-radius: map_get($border-radius, default);
-    box-shadow: 0 -3px 18px 0 rgba(17,26,34,0.22);
+    box-shadow: 0 rem(2) rem(24) 0 rgba(17,26,34,0.15);
 }
 
 .case__content {
     display: flex;
     flex-direction: column;
-    max-width: rem(408);
-    margin-left: rem(40);
-    font-size: rem(22);
+    width: rem(360);
+    margin-left: rem(56);
     line-height: 1.4;
+    font-size: rem(20);
 }
