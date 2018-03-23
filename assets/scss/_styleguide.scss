@@ -20,8 +20,9 @@ h1 {
 }
 
 h2 {
-    font-size: rem(32);
+    font-size: rem(28);
     font-weight: 500;
+    margin-top: rem(32);
 }
 
 h3 {
@@ -45,23 +46,23 @@ p {
     margin: 0;
     max-width: rem(760);
     font-size: rem(20);
-    line-height: 1.6;
+    line-height: 1.7;
+    color: #727b84;
 
     & + p {
         margin-top: rem(8);
     }
+}
 
-    @include max-tablet-portrait() {
-        font-size: rem(18);
-        line-height: 1.4;
-    }
+.paragraph-intro {
+    font-size: rem(20);
 }
 
 h2, h3, h4, h5, h6 {
     margin-bottom: rem(0);
 
     & + p, & + ul, & + ol {
-        margin-top: rem(16);
+        margin-top: rem(8);
     }
 }
 
@@ -90,6 +91,8 @@ a {
         color: map_get($colors, black);
     }
 }
+
+
 
 img {
     max-width: 100%;

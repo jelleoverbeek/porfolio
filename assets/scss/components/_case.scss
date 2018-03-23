@@ -25,6 +25,16 @@
     }
 }
 
+.case--detail {
+    border: none;
+    margin-top: rem(40);
+    padding: rem(40) rem(0) 0 rem(0);
+
+    //&:nth-child(even) {
+    //    flex-direction: row-reverse;
+    //}
+}
+
 .case--mobile {
     .case__preview {
         max-width: rem(320);

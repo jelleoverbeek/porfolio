@@ -27,7 +27,8 @@ gulp.task('js', function () {
 gulp.task('twig', function () {
     const files = [
         "./assets/twig/index.twig",
-        "./assets/twig/about.twig"
+        "./assets/twig/about.twig",
+        "./assets/twig/case-detail.twig"
     ];
 
     return gulp.src(files)
