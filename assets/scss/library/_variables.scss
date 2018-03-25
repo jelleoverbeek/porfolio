@@ -3,11 +3,12 @@ $colors: (
     black: rgb(49, 49, 49),
     paragraph-text: rgb(87, 103, 117),
     light-gray: rgb(250, 250, 250),
-    blueish-bg: #FAFAFA
+    white: rgb(255, 255, 255)
 );
 
 $shadows: (
-    default: 0 .125rem .25rem 0 rgba(216, 223, 229, 0.3)
+    default: 0 .125rem .25rem 0 rgba(216, 223, 229, 0.3),
+    button: 0 .125rem .25rem 0 rgba(49,49,49,0.18)
 );
 
 $borders: (
@@ -15,7 +16,8 @@ $borders: (
 );
 
 $border-radius: (
-    default: .375rem
+    default: .375rem,
+    button: .1875rem
 );
 
 $z-indices: (
@@ -24,4 +26,4 @@ $z-indices: (
 
 $container-widths: (
     default: 56rem
-)
+);
