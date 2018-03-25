@@ -52,6 +52,11 @@ p {
     & + p {
         margin-top: rem(8);
     }
+
+    & + button,
+    & + .button {
+        margin-top: rem(16)
+    }
 }
 
 .paragraph-intro {
@@ -92,7 +97,28 @@ a {
     }
 }
 
+button,
+.button {
+    display: inline-block;
+    background-color: map_get($colors, blue);
+    box-shadow: map_get($shadows, button);
+    border-radius: map_get($border-radius, button);
+    color: map_get($colors, white);
+    padding: rem(12) rem(24);
+    font-size: rem(20);
+    font-weight: 500;
+    border: none;
 
+    &:hover, &:focus {
+        background-color: darken(map_get($colors, blue), 5%);
+        color: map_get($colors, white);
+    }
+
+    &:active {
+        background-color: darken(map_get($colors, blue), 7%);
+        color: map_get($colors, white);
+    }
+}
 
 img {
     max-width: 100%;
