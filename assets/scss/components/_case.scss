@@ -8,9 +8,14 @@
     align-items: center;
     justify-content: center;
     margin-top: rem(126);
-    padding: rem(126) rem(32) 0 rem(32);
+    padding-top: rem(126);
     border-top: map_get($borders, default);
     width: 100%;
+
+    @include max-tablet-landscape() {
+        margin-top: rem(112);
+        padding: rem(112) rem(32) 0 rem(32);
+    }
 
     @include max-tablet-portrait() {
         margin-top: rem(80);
@@ -18,14 +23,40 @@
         flex-wrap: wrap;
     }
 
-
     @include max-mobile() {
         margin-top: rem(56);
         padding: rem(56) rem(24) 0 rem(24);
     }
 }
 
+.case--detail {
+    border: none;
+    justify-content: space-between;
+    margin: rem(40) auto 0 auto;
+    padding: rem(40) rem(0) 0 rem(0);
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+
+        .case__content {
+            margin: 0 rem(56) 0 0;
+
+            @include max-tablet-portrait() {
+                margin: rem(16) 0 0 0;
+            }
+        }
+    }
+
+    @include max-tablet-portrait() {
+        justify-content: center;
+    }
+}
+
 .case--mobile {
+    &.case--detail {
+        max-width: rem(752);
+    }
+
     .case__preview {
         max-width: rem(320);
     }
@@ -59,5 +90,21 @@
     @include max-tablet-portrait() {
         margin: rem(16) 0 0 0;
         width: 100%;
+    }
+}
+
+.case-prototype {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: rem(112);
+
+    @include max-tablet-portrait() {
+        margin-top: rem(80);
+        align-items: flex-start;
+    }
+
+    @include max-mobile() {
+        margin-top: rem(56);
     }
 }
