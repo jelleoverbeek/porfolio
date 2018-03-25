@@ -1,0 +1,43 @@
+$path-color: #D8E0E5;
+
+.timeline {
+
+}
+
+.timeline-path {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: rem(18);
+}
+
+.timeline-path__start {
+
+    &:after {
+        margin: rem(8) auto;
+        content: " ";
+        display: block;
+        width: rem(8);
+        height: rem(8);
+        border-radius: rem(8);
+        background-color: $path-color;
+    }
+}
+
+.timeline-path__year {
+    margin-bottom: rem(8);
+
+    &::before {
+        content: " ";
+        display: block;
+        height: rem(208);
+        width: rem(2);
+        margin: 0 auto rem(8) auto;
+        background-image: repeating-linear-gradient(
+                        180deg,
+                        $path-color rem(0),
+                        $path-color rem(4),
+                        transparent rem(4),
+                        transparent rem(8));
+    }
+}
