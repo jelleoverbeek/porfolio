@@ -1,7 +1,35 @@
 $path-color: #D8E0E5;
 
 .timeline {
+    margin-top: rem(126);
+    display: flex;
+    justify-content: center;
+}
 
+.timeline__col {
+    display: flex;
+}
+
+.timeline-item {
+    width: rem(210);
+    text-align: center;
+}
+
+.timeline-item__text {
+    margin-top: rem(8);
+    font-size: rem(16);
+    line-height: 1.5;
+    color: map_get($colors, black);
+}
+
+.timeline-item__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: rem(250);
+    width: rem(80);
+    height: rem(80);
+    border: rem(2) solid $path-color;
 }
 
 .timeline-path {
