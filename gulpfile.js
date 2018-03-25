@@ -2,6 +2,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const twig = require('gulp-twig');
+const clean = require('gulp-clean');
 
 gulp.task('sass', function () {
     return gulp.src('./assets/scss/**/*.scss')
@@ -24,11 +25,17 @@ gulp.task('js', function () {
         .pipe(gulp.dest('./build/assets/js'))
 });
 
+gulp.task('clean', function () {
+    return gulp.src('./build', {read: false})
+        .pipe(clean());
+});
+
 gulp.task('twig', function () {
     const files = [
         "./assets/twig/index.twig",
         "./assets/twig/about.twig",
-        "./assets/twig/case-detail.twig"
+        "./assets/twig/spacerace.twig",
+        "./assets/twig/imdb.twig"
     ];
 
     return gulp.src(files)
@@ -41,4 +48,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig', 'video']);
-gulp.task('build', ['sass', 'js', 'img', 'twig', 'video']);
+gulp.task('build', ['clean', 'sass', 'js', 'img', 'twig', 'video']);
