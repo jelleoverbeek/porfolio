@@ -32,7 +32,23 @@ const timeline = {
             }
         });
     },
+    setPositions: function () {
+        this.years.forEach((year) => {
+            let yearRect = year.getBoundingClientRect();
+            let currentYear = year.dataset.year;
+
+            this.items.forEach((item) => {
+                if(item.dataset.yearEnd === currentYear) {
+                    let itemRect = item.getBoundingClientRect();
+                    let itemHeight = itemRect.height;
+                    item.style.top = year.offsetTop + yearRect.height - (itemHeight/2) + "px";
+                }
+            });
+        });
+    },
     init: function () {
+        this.setPositions();
+
         window.addEventListener("scroll", (ev) => {
             this.checkPosition(ev);
         });
