@@ -1,6 +1,7 @@
 $path-color: #D8E0E5;
 
 .timeline {
+    position: relative;
     margin-top: rem(126);
     display: flex;
     justify-content: center;
@@ -11,8 +12,15 @@ $path-color: #D8E0E5;
 }
 
 .timeline-item {
+    position: sticky;
+    top: 0;
     width: rem(210);
+    max-height: rem(210);
     text-align: center;
+}
+
+.invisible {
+    opacity: 0.3;
 }
 
 .timeline-item__text {
