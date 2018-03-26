@@ -1,8 +1,11 @@
-'use strict';
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const twig = require('gulp-twig');
 const clean = require('gulp-clean');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const cleanCSS = require('gulp-clean-css');
+const gulpSequence = require('gulp-sequence')
 
 gulp.task('sass', function () {
     return gulp.src('./assets/scss/**/*.scss')
@@ -21,9 +24,25 @@ gulp.task('video', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src('./assets/js/**/*')
+    return gulp.src('./assets/js/**/*.js')
         .pipe(gulp.dest('./build/assets/js'))
 });
+
+gulp.task('js:minify', () => {
+    return gulp.src('./build/assets/js/**/*.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('./build/assets/js'))
+});
+
+gulp.task('css:minify',() => {
+    return gulp.src('./build/assets/css/**/*.css')
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('./build/assets/css'));
+});
+
 
 gulp.task('clean', function () {
     return gulp.src('./build', {read: false})
@@ -33,7 +52,7 @@ gulp.task('clean', function () {
 gulp.task('twig', function () {
     const files = [
         "./assets/twig/index.twig",
-        "./assets/twig/about.twig",
+        "./assets/twig/contact.twig",
         "./assets/twig/spacerace.twig",
         "./assets/twig/imdb.twig"
     ];
@@ -48,4 +67,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig', 'video']);
-gulp.task('build', ['clean', 'sass', 'js', 'img', 'twig', 'video']);
+gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img', 'twig', 'video'], ['js:minify', 'css:minify']));
