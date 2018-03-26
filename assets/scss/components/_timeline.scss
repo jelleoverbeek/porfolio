@@ -17,6 +17,8 @@ $path-color: #D8E0E5;
     top: 0;
     width: rem(210);
     text-align: center;
+
+    @include transition(2s);
 }
 
 .invisible {

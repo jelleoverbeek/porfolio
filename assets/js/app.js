@@ -22,15 +22,38 @@ const timeline = {
         });
 
         this.items.forEach((item) => {
-            let startYear = item.dataset.yearStart,
+            let rect = item.getBoundingClientRect(),
+                startYear = item.dataset.yearStart,
                 endYear = item.dataset.yearEnd;
 
-            if(startYear < currentYear && endYear >= currentYear || endYear === "now") {
+            if(startYear <= currentYear && endYear >= currentYear || endYear === "now") {
                 this.makeSticky(item);
+
+                if(rect.y <= 0) {
+                    item.style.position = "fixed";
+                    item.style.top = "0";
+                }
+            } else if(startYear === currentYear) {
+                item.style.position = "absolute";
+                item.style.top = this.calculateEndPosition(item);
             } else {
                 this.unmakeSticky(item);
             }
         });
+    },
+    calculateEndPosition: function (item) {
+        let itemRect = item.getBoundingClientRect();
+        let itemHeight = itemRect.height;
+        let topPosition = "";
+
+        this.years.forEach((year) => {
+            let yearRect = year.getBoundingClientRect();
+            if(year.dataset.year === item.dataset.yearEnd) {
+                topPosition = year.offsetTop + yearRect.height - (itemHeight/2) + "px";
+            }
+        });
+
+        return topPosition;
     },
     setPositions: function () {
         this.years.forEach((year) => {
