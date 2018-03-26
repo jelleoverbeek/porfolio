@@ -5,6 +5,7 @@ const clean = require('gulp-clean');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
+const gulpSequence = require('gulp-sequence')
 
 gulp.task('sass', function () {
     return gulp.src('./assets/scss/**/*.scss')
@@ -66,4 +67,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig', 'video']);
-gulp.task('build', ['clean', 'sass', 'js', 'img', 'twig', 'video', 'js:minify', 'css:minify']);
+gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img', 'twig', 'video'], ['js:minify', 'css:minify']));
