@@ -4,6 +4,7 @@ const twig = require('gulp-twig');
 const clean = require('gulp-clean');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('sass', function () {
     return gulp.src('./assets/scss/**/*.scss')
@@ -34,6 +35,13 @@ gulp.task('js:minify', () => {
         .pipe(uglify())
         .pipe(gulp.dest('./build/assets/js'))
 });
+
+gulp.task('css:minify',() => {
+    return gulp.src('./build/assets/css/**/*.css')
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('./build/assets/css'));
+});
+
 
 gulp.task('clean', function () {
     return gulp.src('./build', {read: false})
