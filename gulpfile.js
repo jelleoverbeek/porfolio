@@ -1,8 +1,9 @@
-'use strict';
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const twig = require('gulp-twig');
 const clean = require('gulp-clean');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 
 gulp.task('sass', function () {
     return gulp.src('./assets/scss/**/*.scss')
@@ -21,7 +22,16 @@ gulp.task('video', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src('./assets/js/**/*')
+    return gulp.src('./assets/js/**/*.js')
+        .pipe(gulp.dest('./build/assets/js'))
+});
+
+gulp.task('js:minify', () => {
+    return gulp.src('./build/assets/js/**/*.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(uglify())
         .pipe(gulp.dest('./build/assets/js'))
 });
 
