@@ -66,4 +66,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig', 'video']);
-gulp.task('build', ['clean', 'sass', 'js', 'img', 'twig', 'video']);
+gulp.task('build', ['clean', 'sass', 'js', 'img', 'twig', 'video', 'js:minify', 'css:minify']);
