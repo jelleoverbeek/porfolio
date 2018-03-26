@@ -52,6 +52,7 @@ gulp.task('clean', function () {
 gulp.task('twig', function () {
     const files = [
         "./assets/twig/index.twig",
+        "./assets/twig/about.twig",
         "./assets/twig/contact.twig",
         "./assets/twig/spacerace.twig",
         "./assets/twig/imdb.twig"
