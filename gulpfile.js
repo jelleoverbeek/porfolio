@@ -16,6 +16,11 @@ gulp.task('sass', function () {
 
 gulp.task('cases', function () {
     return gulp.src('./assets/cases/**/*')
+        .pipe(gulp.dest('./build/assets/cases'))
+});
+
+gulp.task('cases:compress', function () {
+    return gulp.src('./assets/cases/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./build/assets/cases'))
 });
@@ -81,4 +86,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig', 'cases']);
-gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img:compress', 'twig', 'cases'], ['js:minify', 'css:minify']));
+gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img:compress', 'twig', 'cases:compress'], ['js:minify', 'css:minify']));
