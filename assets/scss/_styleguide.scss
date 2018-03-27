@@ -12,6 +12,7 @@ html {
 
 body {
     margin: 0;
+    padding-top: rem(64);
 }
 
 h1 {
@@ -142,4 +143,28 @@ section {
         padding: 0 rem(24);
     }
 
+}
+
+.section--outro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: rem(112);
+
+    @include max-tablet-portrait() {
+        margin-top: rem(80);
+        align-items: flex-start;
+    }
+
+    @include max-mobile() {
+        margin-top: rem(56);
+    }
+}
+
+.section--contact {
+    padding: rem(64) rem(24);
+
+    p {
+        font-size: rem(22)
+    }
 }
