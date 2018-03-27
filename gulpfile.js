@@ -13,6 +13,11 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./build/assets/css'));
 });
 
+gulp.task('cases', function () {
+    return gulp.src('./assets/cases/**/*')
+        .pipe(gulp.dest('./build/assets/cases'))
+});
+
 gulp.task('img', function () {
     return gulp.src('./assets/img/**/*')
         .pipe(gulp.dest('./build/assets/img'))
@@ -54,6 +59,7 @@ gulp.task('twig', function () {
         "./assets/twig/index.twig",
         "./assets/twig/contact.twig",
         "./assets/twig/spacerace.twig",
+        "./assets/twig/csr.twig",
         "./assets/twig/imdb.twig"
     ];
 
@@ -66,5 +72,5 @@ gulp.task('watch', function () {
     gulp.watch('./assets/**/*', ['default']);
 });
 
-gulp.task('default', ['sass', 'js', 'img', 'twig', 'video']);
-gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img', 'twig', 'video'], ['js:minify', 'css:minify']));
+gulp.task('default',  gulpSequence('clean', ['sass', 'js', 'img', 'twig', 'cases']));
+gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img', 'twig', 'cases'], ['js:minify', 'css:minify']));
