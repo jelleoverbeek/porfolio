@@ -72,5 +72,5 @@ gulp.task('watch', function () {
     gulp.watch('./assets/**/*', ['default']);
 });
 
-gulp.task('default',  gulpSequence('clean', ['sass', 'js', 'img', 'twig', 'cases']));
+gulp.task('default', ['sass', 'js', 'img', 'twig', 'cases']);
 gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img', 'twig', 'cases'], ['js:minify', 'css:minify']));

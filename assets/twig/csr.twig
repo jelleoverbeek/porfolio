@@ -1,54 +1,71 @@
 {# case-detail.twig #}
 {% extends "components/_layout.twig" %}
-{% set title = "IMDb" %}
+{% set title = "CSR platform" %}
 
 {% block page %}
 
 <section>
-    <h1>IMDb redesign</h1>
-    <p class="paragraph-intro">
-        VolkerWessels is a big company with many subsidiary companies, all these companies have data that VolkerWessels needs to collect to make a complete CSR report. It turns out that it is a hard challenge to collect and manage all this data. To make this an automated process we are building a platform where all the subsidiary companies can fill in their data.
-    </p>
+    <h1>CSR Platform</h1>
+    <p>VolkerWessels is a big company with many subsidiary companies, all these companies have data that VolkerWessels needs to collect to make a complete Corporate Social Responsibility report.</p>
+    <p>It turns out that it's a big challenge to collect and manage all this data. To make this an automated process we are building a platform where all the subsidiary companies can fill in their data.</p>
 
     <ul class="navigation navigation--big">
         <li><a href="//framer.cloud/AZmcA/" target="_blank">Check out the prototype</a></li>
     </ul>
 
     <article class="case case--detail">
-        <video class="case__preview" src="assets/video/cases/imdb.mp4" autoplay loop>
-            <img class="case__preview" src="assets/img/cases/imdb.png" srcset="assets/img/cases/imdb.png 1x, assets/img/cases/imdb@2x.png 2x">
-        </video>
+        <img class="case__preview" src="assets/cases/csr/csr.png" srcset="assets/cases/csr/csr.png 1x, assets/cases/csr/csr@2x.png 2x">
         <div class="case__content">
-            <h3>Exploring movies</h3>
-            <p>The primary focus is on exploring movies. Hovering over a movie poster will show the trailer and a quick icon to add it to your watchlist.</p>
+            <h3>Meters</h3>
+            <p>An admin creates a meter and selects which data it contains. Let's say we make an new meter containing fuel.</p>
         </div>
     </article>
 
     <article class="case case--detail">
-        <video class="case__preview" src="assets/video/cases/imdb_sidescroll.mp4" autoplay loop>
-            <img class="case__preview" src="assets/img/cases/imdb.png" srcset="assets/img/cases/imdb.png 1x, assets/img/cases/imdb@2x.png 2x">
-        </video>
+        <img class="case__preview" src="assets/cases/csr/csr-detail.png" srcset="assets/cases/csr/csr-detail.png 1x, assets/cases/csr/csr-detail@2x.png 2x">
         <div class="case__content">
-            <h3>More movies to explore</h3>
-            <p>To load more movies I used a pattern that a lot of users will recognize from, for example, Netflix.</p>
-        </div>c
+            <h3>Meter-ception</h3>
+            <p>A meter can contain a lot of other meters. We make two new meters called: Gasoline and Diesel. We assign these meters to a subsidiary company</p>
+        </div>
     </article>
 
     <article class="case case--detail">
-        <video class="case__preview" src="assets/video/cases/imdb_addfavs.mp4" autoplay loop>
-            <img class="case__preview" src="assets/img/cases/imdb.png" srcset="assets/img/cases/imdb.png 1x, assets/img/cases/imdb@2x.png 2x">
-        </video>
+        <img class="case__preview" src="assets/cases/csr/csr-adddata.png" srcset="assets/cases/csr/csr-adddata.png 1x, assets/cases/csr/csr-adddata@2x.png 2x">
         <div class="case__content">
-            <h3>Watchlist</h3>
-            <p>The watchlist feature is more obvious and discoverable in the new design. It should be available wherever a movie title or poster is displayed.</p>
+            <h3>Adding data</h3>
+            <p>The company starts filling the meter with data. This can be done manually or using a source file (.csv for example).</p>
+        </div>
+    </article>
+
+    <article class="case case--detail">
+        <img class="case__preview" src="assets/cases/csr/csr-history.png" srcset="assets/cases/csr/csr-history.png 1x, assets/cases/csr/csr-history@2x.png 2x">
+        <div class="case__content">
+            <h3>History</h3>
+            <p>The subsidiary company and admin can see all the data that is added to the meter.</p>
+        </div>
+    </article>
+
+    <article class="case case--detail">
+        <img class="case__preview" src="assets/cases/csr/csr-newalarm.png" srcset="assets/cases/csr/csr-newalarm.png 1x, assets/cases/csr/csr-newalarm@2x.png 2x">
+        <div class="case__content">
+            <h3>Alarms</h3>
+            <p>The admin can also make alarms to notify users that they have to fill in their data.</p>
+        </div>
+    </article>
+
+    <article class="case case--detail">
+        <img class="case__preview" src="assets/cases/csr/csr-report.png" srcset="assets/cases/csr/csr-report.png 1x, assets/cases/csr/csr-report@2x.png 2x">
+        <div class="case__content">
+            <h3>Generating reports</h3>
+            <p>When generating a report the user can choose to upload his own Word template.</p>
         </div>
     </article>
 </section>
 
 <section class="case-prototype" id="prototype">
-    <h2>Prototype</h2>
-    <p>This project was the first time I used Framer as my prototyping tool.</p>
-    <a class="button" href="#">Bring me there</a>
+    <h2>InVision Prototype</h2>
+    <p>Check out the prototype for more and bigger screens.</p>
+    <a class="button" href="#">Open prototype</a>
 </section>
 
 {% endblock %}
