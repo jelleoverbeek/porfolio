@@ -5,7 +5,8 @@ const clean = require('gulp-clean');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
-const gulpSequence = require('gulp-sequence')
+const gulpSequence = require('gulp-sequence');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('sass', function () {
     return gulp.src('./assets/scss/**/*.scss')
@@ -15,11 +16,18 @@ gulp.task('sass', function () {
 
 gulp.task('cases', function () {
     return gulp.src('./assets/cases/**/*')
+        .pipe(imagemin())
         .pipe(gulp.dest('./build/assets/cases'))
 });
 
 gulp.task('img', function () {
     return gulp.src('./assets/img/**/*')
+        .pipe(gulp.dest('./build/assets/img'))
+});
+
+gulp.task('img:compress', function () {
+    return gulp.src('./assets/img/**/*')
+        .pipe(imagemin())
         .pipe(gulp.dest('./build/assets/img'))
 });
 
@@ -73,4 +81,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig', 'cases']);
-gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img', 'twig', 'cases'], ['js:minify', 'css:minify']));
+gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img:compress', 'twig', 'cases'], ['js:minify', 'css:minify']));
