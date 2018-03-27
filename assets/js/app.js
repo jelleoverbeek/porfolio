@@ -2,6 +2,7 @@ const autoplay = {
     vids: document.querySelectorAll("video"),
     play: function(vid) {
         vid.play().then(() => {
+            
         }).catch((error) => {
             console.log(error);
         });
@@ -10,11 +11,10 @@ const autoplay = {
 
         vids.forEach((vid) => {
             let rect = vid.getBoundingClientRect();
-            let horizontalCenterScrollPos = scrollPos + (window.innerHeight / 2);
-            let visible = horizontalCenterScrollPos >= rect.y + (rect.height / 2);
-            let bottomReached = horizontalCenterScrollPos <= rect.y + rect.height;
+            let topVisible = vid.offsetTop > scrollPos;
+            let bottomVisible = vid.offsetTop + rect.height < scrollPos + window.innerHeight;
 
-            if(visible && !bottomReached){
+            if(topVisible && bottomVisible){
                 this.play(vid);
             } else {
                 vid.pause();
