@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 const gulpSequence = require('gulp-sequence');
 const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
 
 gulp.task('sass', function () {
     return gulp.src('./assets/scss/**/*.scss')
@@ -16,6 +17,7 @@ gulp.task('sass', function () {
 
 gulp.task('cases', function () {
     return gulp.src('./assets/cases/**/*')
+        .pipe(webp())
         .pipe(gulp.dest('./build/assets/cases'))
 });
 
@@ -27,6 +29,7 @@ gulp.task('cases:compress', function () {
 
 gulp.task('img', function () {
     return gulp.src('./assets/img/**/*')
+        .pipe(webp())
         .pipe(gulp.dest('./build/assets/img'))
 });
 
