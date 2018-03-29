@@ -2,6 +2,13 @@
 {% extends "components/_layout.twig" %}
 {% set title = "IMDb" %}
 
+{% set caseNav  = {
+    "previousText": "SpaceRace",
+    "previousLink": "spacerace.html",
+    "nextText": "CSR Platform",
+    "nextLink": "csr.html",
+}%}
+
 {% block page %}
 
 <section>
@@ -54,5 +61,7 @@
     <p>Check out the design as Framer prototype</p>
     <a class="button" href="https://framer.cloud/AZmcA/" target="_blank">Show me!</a>
 </section>
+
+{% include "components/_case-nav.twig" with caseNav %}
 
 {% endblock %}

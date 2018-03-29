@@ -1,0 +1,10 @@
+{# _case-nav.twig #}
+
+<section class="case-nav">
+    {% if caseNav.previousLink and caseNav.previousText %}
+        <a class="case-nav__previous" href="{{ caseNav.previousLink }}">{{ caseNav.previousText }}</a>
+    {% endif %}
+    {% if caseNav.nextLink and caseNav.nextText %}
+        <a class="case-nav__next" href="{{ caseNav.nextLink }}">{{ caseNav.nextText }}</a>
+    {% endif %}
+</section>

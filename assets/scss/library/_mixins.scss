@@ -24,3 +24,10 @@ $max-tablet-landscape: rem(1088);
         @content;
     }
 }
+
+@mixin psuedoIcon($size: 16) {
+    content: " ";
+    display: inline-block;
+    width: $size;
+    height: $size;
+}
