@@ -86,7 +86,7 @@ a {
     color: map_get($colors, blue);
     text-decoration: none;
 
-    @include transition();
+    @include transition(0.1s, color);
 
     &:hover,
     &:focus {
