@@ -1,0 +1,37 @@
+section {
+    max-width: map_get($container-widths, default);
+    margin: 0 auto;
+
+    @include max-tablet-landscape() {
+        padding: 0 rem(32);
+    }
+
+    @include max-tablet-portrait() {
+        padding: 0 rem(24);
+    }
+
+}
+
+.section--outro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: rem(112);
+
+    @include max-tablet-portrait() {
+        margin-top: rem(80);
+        align-items: flex-start;
+    }
+
+    @include max-mobile() {
+        margin-top: rem(56);
+    }
+}
+
+.section--contact {
+    padding: rem(64) rem(24);
+
+    p {
+        font-size: rem(22)
+    }
+}

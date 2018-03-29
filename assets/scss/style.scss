@@ -1,15 +1,15 @@
 // Library
 @import "library/variables";
 @import "library/mixins";
-@import "library/fonts";
 @import "library/buttons";
 @import "library/utilities";
 @import "library/animations";
 
 // Styleguide
-@import "styleguide";
+@import "base";
 
 // Components
+@import "components/sections";
 @import "components/nav";
 @import "components/footer";
 @import "components/case";
