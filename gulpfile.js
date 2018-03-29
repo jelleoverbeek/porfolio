@@ -67,6 +67,11 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
+gulp.task('htaccess', function () {
+    return gulp.src('./assets/.htaccess')
+        .pipe(gulp.dest('./build/'));
+});
+
 gulp.task('twig', function () {
     const files = [
         "./assets/twig/index.twig",
@@ -84,5 +89,5 @@ gulp.task('watch', function () {
     gulp.watch('./assets/**/*', ['default']);
 });
 
-gulp.task('default', ['sass', 'js', 'img', 'twig', 'cases']);
-gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img:compress', 'twig', 'cases:compress'], ['js:minify', 'css:minify']));
+gulp.task('default', ['sass', 'js', 'img', 'twig', 'cases', 'htaccess']);
+gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img:compress', 'twig', 'cases:compress', 'htaccess'], ['js:minify', 'css:minify']));
