@@ -24,7 +24,7 @@ section {
     }
 
     @include max-mobile() {
-        margin-top: rem(56);
+        margin-top: rem(40);
     }
 }
 
@@ -33,5 +33,9 @@ section {
 
     p {
         font-size: rem(22)
+    }
+
+    @include max-mobile() {
+        padding: rem(16) rem(24);
     }
 }

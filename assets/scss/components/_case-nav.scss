@@ -4,6 +4,11 @@
     align-items: baseline;
     font-size: rem(20);
     margin-top: rem(128);
+
+    @include max-tablet-portrait() {
+        margin-top: rem(80);
+    }
+
 }
 
 .case-nav__next,
