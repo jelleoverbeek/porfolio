@@ -67,9 +67,12 @@
 }
 
 .case__preview {
-    border-radius: map_get($border-radius, default);
-    box-shadow: 0 rem(2) rem(24) 0 rgba(17,26,34,0.15);
     max-width: rem(496);
+
+    img, video {
+        border-radius: map_get($border-radius, default);
+        box-shadow: 0 rem(2) rem(24) 0 rgba(17,26,34,0.15);
+    }
 
     @include max-tablet-landscape() {
         width: 52%;
