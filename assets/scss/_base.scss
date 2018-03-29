@@ -83,6 +83,31 @@ a {
     }
 }
 
+%chevron {
+    display: flex;
+    align-items: center;
+}
+
+.chevron--right {
+    @extend %chevron;
+
+    &::after {
+        @include psuedoIcon(rem(16));
+        background-image: url("../img/chevron-right.svg");
+        margin-left: rem(8);
+    }
+}
+
+.chevron--left {
+    @extend %chevron;
+
+    &::before {
+        @include psuedoIcon(rem(16));
+        background-image: url("../img/chevron-left.svg");
+        margin-right: rem(8);
+    }
+}
+
 img,
 video {
     max-width: 100%;
