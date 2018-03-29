@@ -23,7 +23,7 @@ const autoplay = {
     },
     init: function () {
         window.addEventListener("scroll", (ev) => {
-            this.isVidVisible(this.vids, window.scrollY);
+            this.isVidVisible(this.vids, window.pageYOffset);
         });
         console.log(this.vids);
     }
