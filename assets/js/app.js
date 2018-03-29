@@ -25,7 +25,8 @@ const autoplay = {
         window.addEventListener("scroll", (ev) => {
             this.isVidVisible(this.vids, window.pageYOffset);
         });
-        console.log(this.vids);
+
+        this.isVidVisible(this.vids, window.pageYOffset);
     }
 };
 
