@@ -2,6 +2,13 @@
 {% extends "components/_layout.twig" %}
 {% set title = "CSR platform" %}
 
+{% set caseNav  = {
+    "previousText": "IMDb redesign",
+    "previousLink": "imdb.html",
+    "nextText": false,
+    "nextLink": false,
+}%}
+
 {% block page %}
 
 <section>
@@ -79,5 +86,8 @@
     <p>Check out the prototype for more and bigger screens.</p>
     <a class="button" href="https://invis.io/63GKBECGZ97" target="_blank">Open prototype</a>
 </section>
+
+{% include "components/_case-nav.twig" with caseNav %}
+
 
 {% endblock %}

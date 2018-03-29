@@ -1,0 +1,31 @@
+.case-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: rem(20);
+    margin-top: rem(128);
+}
+
+.case-nav__next,
+.case-nav__previous {
+    display: flex;
+    align-items: center;
+}
+
+.case-nav__next {
+    margin-left: auto;
+    &::after {
+        @include psuedoIcon(rem(16));
+        background-image: url("../img/chevron-right.svg");
+        margin-left: rem(8);
+    }
+}
+
+.case-nav__previous {
+    margin-right: auto;
+    &::before {
+        @include psuedoIcon(rem(16));
+        background-image: url("../img/chevron-left.svg");
+        margin-right: rem(8);
+    }
+}

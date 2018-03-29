@@ -2,6 +2,13 @@
 {% extends "components/_layout.twig" %}
 {% set title = "SpaceRace" %}
 
+{% set caseNav  = {
+    "previousText": false,
+    "previousLink": false,
+    "nextText": "IMDb redesign",
+    "nextLink": "imdb.html",
+}%}
+
 {% block page %}
 
 <section>
@@ -69,5 +76,7 @@
     <p>The app is best viewed using the Framer Preview (<a href="https://framer.cloud/wkdqr">iOS</a> / <a href="https://play.google.com/store/apps/details?id=com.framerjs.android&hl=en">Android</a>) app</p>
     <a class="button" href="https://framer.cloud/wkdqr" target="_blank">Prototype</a>
 </section>
+
+{% include "components/_case-nav.twig" with caseNav %}
 
 {% endblock %}
