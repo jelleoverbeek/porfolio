@@ -13,6 +13,18 @@ html {
 body {
     margin: 0;
     padding-top: rem(64);
+
+    @include max-tablet-landscape() {
+        padding-top: rem(56);
+    }
+
+    @include max-tablet-portrait() {
+        padding-top: rem(48);
+    }
+
+    @include max-mobile() {
+        padding-top: rem(24);
+    }
 }
 
 h1 {
