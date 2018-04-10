@@ -89,7 +89,8 @@ gulp.task('twig', function () {
         "./assets/twig/index.twig",
         "./assets/twig/spacerace.twig",
         "./assets/twig/csr.twig",
-        "./assets/twig/imdb.twig"
+        "./assets/twig/imdb.twig",
+        "./assets/twig/links.twig"
     ];
 
     return gulp.src(files)
