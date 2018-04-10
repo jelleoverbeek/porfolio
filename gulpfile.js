@@ -7,6 +7,18 @@ const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 const gulpSequence = require('gulp-sequence');
 const imagemin = require('gulp-imagemin');
+const webserver = require('gulp-webserver');
+
+gulp.task('webserver', function() {
+    return gulp.src('./build/')
+        .pipe(webserver({
+            host: 'localhost',
+            port: 3000,
+            livereload: true,
+            open: true,
+            fallback: './build/index.html'
+        }));
+});
 
 gulp.task('sass', function () {
     return gulp.src('./assets/scss/**/*.scss')
