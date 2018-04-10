@@ -1,12 +1,20 @@
-{# index.twig #}
-{% extends "components/_layout.twig" %}
-{% set title = "Links" %}
-
-{% block head %}
+{# links.twig #}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name=”robots” content=”noindex,nofollow”/>
-{% endblock %}
 
-{% block page %}
+    <title>Links</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png"/>
+</head>
+<body>
+
     <section>
         <h1>Items</h1>
         <a href="https://framer.cloud/wkdqr" target="_blank"><h2>SpaceRace</h2></a>
@@ -19,4 +27,6 @@
         <a href="https://invis.io/9XD6IWPRZ#/250000297_Devices" target="_blank"><h2>AgileXS</h2></a>
         <a href="https://lugarde-configurator.nl/" target="_blank"><h2>Lugarde</h2></a>
     </section>
-{% endblock %}
+
+</body>
+</html>
