@@ -103,4 +103,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig', 'cases', 'htaccess']);
-gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img:compress', 'twig', 'cases:compress', 'htaccess'], ['js:minify', 'css:minify']));
+gulp.task('build',  gulpSequence('clean', ['sass', 'js', 'img', 'twig', 'cases', 'htaccess'], ['js:minify', 'css:minify', 'img:compress', 'cases:compress']));
