@@ -45,47 +45,7 @@
 {% block page %}
 
 {% include "components/_nav.twig" %}
-
-<section>
-    <h1>{{ case.title }}</h1>
-    <p>{{ case.description }}</p>
-
-    <ul class="navigation navigation--big">
-        <li><a href="#prototype">Check out the prototype</a></li>
-    </ul>
-
-    {% for chapter in case.chapters %}
-        <article class="case case--detail">
-            <div class="case__preview">
-                {% if chapter.video %}
-                    <video poster="{{ chapter.img }}@2x.{{ chapter.imgExtension }}" muted webkit-playsinline playsinline loop>
-
-                        {% for extension in chapter.vidExtensions %}
-                            <source src="{{ chapter.video }}.{{ extension }}" type="video/{{ extension }}">
-                        {% endfor %}
-
-                        <img src="{{ chapter.img }}.{{ chapter.imgExtension }}" srcset="{{ chapter.img }}.{{ chapter.imgExtension }} 1x, {{ chapter.img }}@2x.{{ chapter.imgExtension }} 2x">
-                    </video>
-                {% else %}
-                    <img src="{{ chapter.img }}.{{ chapter.imgExtension }}" srcset="{{ chapter.img }}.{{ chapter.imgExtension }} 1x, {{ chapter.img }}@2x.{{ chapter.imgExtension }} 2x">
-                {% endif %}
-            </div>
-            <div class="case__content">
-                <h3>{{ chapter.title }}</h3>
-                <p>{{ chapter.description }}</p>
-            </div>
-        </article>
-    {% endfor %}
-</section>
-
-{% if case.prototype.link %}
-    <section class="section--outro" id="prototype">
-        <h2>{{ case.prototype.title }}</h2>
-        <p>{{ case.prototype.text }}</p>
-        <a class="button" href="{{ case.prototype.link }}" target="_blank">{{ case.prototype.btnText }}</a>
-    </section>
-{% endif %}
-
+{% include "components/_case.twig" with case %}
 {% include "components/_case-nav.twig" with caseNav %}
 
 {% endblock %}
