@@ -9,84 +9,50 @@
     "nextLink": "/imdb",
 }%}
 
+{% set case = {
+    "title": "SpaceRace",
+    "description": "This was an app I created together with two friends. The goal of this project was to create an app that decreases distraction. We made a “game” that the user can play by keeping his phone locked or on the game screen. Leaving the app will cause losing points.",
+    "chapters": [{
+        "title": "Customizing the ship",
+        "description": "The users can customize their ship in exchange for tokens. Tokens can be earned by getting work done.",
+        "img": "/assets/cases/spacerace/spacerace",
+        "imgExtension": "png",
+        "video": "/assets/cases/spacerace/spacerace",
+        "vidExtensions": ["webm", "mp4"]
+    }, {
+        "title": "Setting the focus time",
+        "description": "The focus time can be set using a themed slide. To nudge the user that this element contains interaction, I added a small animation to the handle.",
+        "img": "/assets/cases/spacerace/spacerace_focustime",
+        "imgExtension": "png",
+        "video": "/assets/cases/spacerace/spacerace_focustime",
+        "vidExtensions": ["webm", "mp4"]
+    }, {
+        "title": 'Playing" together',
+        "description": "Inviting others can be done using a link or using the friendlist.",
+        "img": "/assets/cases/spacerace/spacerace_addfriends",
+        "imgExtension": "png",
+        "video": "/assets/cases/spacerace/spacerace_addfriends",
+        "vidExtensions": ["webm", "mp4"]
+    }, {
+        "title": "Rewards",
+        "description": "After completing a session the user gets the earned tokens. If the user did very well, there is also a possibility that the user gets a random reward.",
+        "img": "/assets/cases/spacerace/spacerace_reward",
+        "imgExtension": "png",
+        "video": "/assets/cases/spacerace/spacerace_reward",
+        "vidExtensions": ["webm", "mp4"]
+    }],
+    "prototype": {
+        "title": "Prototype",
+        "text": 'The app is best viewed using the Framer Preview (<a href="https://itunes.apple.com/nl/app/framer-preview/id1124920547?mt=8">iOS</a> / <a href="https://play.google.com/store/apps/details?id=com.framerjs.android&hl=en">Android</a>) app',
+        "link": "https://framer.cloud/wkdqr",
+        "btnText": "Prototype"
+    }
+} %}
+
 {% block page %}
 
 {% include "components/_nav.twig" %}
-
-<section>
-    <h1>SpaceRace</h1>
-    <p>
-        This was an app I created together with two friends. The goal of this project was to create an app that decreases distraction.
-        We made a “game” that the user can play by keeping his phone locked or on the game screen. Leaving the app will cause losing points.
-    </p>
-
-    <ul class="navigation navigation--big">
-        <li><a href="#prototype">Check out the prototype</a></li>
-    </ul>
-
-    <article class="case case--detail case--mobile">
-        <div class="case__preview">
-            <video poster="/assets/cases/spacerace/spacerace@2x.png" muted webkit-playsinline playsinline loop>
-                <source src="/assets/cases/spacerace/spacerace.webm" type="video/webm">
-                <source src="/assets/cases/spacerace/spacerace.mp4" type="video/mp4">
-                <img src="/assets/cases/spacerace/spacerace.png" srcset="/assets/cases/spacerace/spacerace.png 1x, /assets/cases/spacerace/spacerace@2x.png 2x">
-            </video>
-        </div>
-        <div class="case__content">
-            <h3>Customizing the ship</h3>
-            <p>The users can customize their ship in exchange for tokens. Tokens can be earned by getting work done.</p>
-        </div>
-    </article>
-
-    <article class="case case--detail case--mobile">
-        <div class="case__preview">
-            <video poster="/assets/cases/spacerace/spacerace_focustime@2x.png" muted webkit-playsinline playsinline loop>
-                <source src="/assets/cases/spacerace/spacerace_focustime.webm" type="video/webm">
-                <source src="/assets/cases/spacerace/spacerace_focustime.mp4" type="video/mp4">
-                <img src="/assets/cases/spacerace/spacerace_focustime.png" srcset="/assets/cases/spacerace/spacerace_focustime.png 1x, /assets/cases/spacerace/spacerace_focustime@2x.png 2x">
-            </video>
-        </div>
-        <div class="case__content">
-            <h3>Setting the focus time</h3>
-            <p>The focus time can be set using a themed slide. To nudge the user that this element contains interaction, I added a small animation to the handle.</p>
-        </div>
-    </article>
-
-    <article class="case case--detail case--mobile">
-        <div class="case__preview">
-            <video poster="/assets/cases/spacerace/spacerace_addfriends@2x.png" muted webkit-playsinline playsinline loop>
-                <source src="/assets/cases/spacerace/spacerace_addfriends.webm" type="video/webm">
-                <source src="/assets/cases/spacerace/spacerace_addfriends.mp4" type="video/mp4">
-                <img src="/assets/cases/spacerace/spacerace_addfriends.png" srcset="/assets/cases/spacerace/spacerace_addfriends.png 1x, /assets/cases/spacerace/spacerace_addfriends@2x.png 2x">
-            </video>
-        </div>
-        <div class="case__content">
-            <h3>"Playing" together</h3>
-            <p>Inviting others can be done using a link or using the friendlist.</p>
-        </div>
-    </article>
-
-    <article class="case case--detail case--mobile">
-        <div class="case__preview">
-            <video poster="/assets/cases/spacerace/spacerace_reward@2x.png" muted webkit-playsinline playsinline loop>
-                <source src="/assets/cases/spacerace/spacerace_reward.webm" type="video/webm">
-                <source src="/assets/cases/spacerace/spacerace_reward.mp4" type="video/mp4">
-                <img src="/assets/cases/spacerace/spacerace_reward.png" srcset="/assets/cases/spacerace/spacerace_reward.png 1x, /assets/cases/spacerace/spacerace_reward@2x.png 2x">
-            </video>
-        </div>
-        <div class="case__content">
-            <h3>Rewards</h3>
-            <p>After completing a session the user gets the earned tokens. If the user did very well, there is also a possibility that the user gets a random reward.</p>
-        </div>
-    </article>
-</section>
-
-<section class="section--outro" id="prototype">
-    <h2>The prototype</h2>
-    <p>The app is best viewed using the Framer Preview (<a href="https://framer.cloud/wkdqr">iOS</a> / <a href="https://play.google.com/store/apps/details?id=com.framerjs.android&hl=en">Android</a>) app</p>
-    <a class="button" href="https://framer.cloud/wkdqr" target="_blank">Prototype</a>
-</section>
-
+{% include "components/_case.twig" with case %}
 {% include "components/_case-nav.twig" with caseNav %}
 
 {% endblock %}

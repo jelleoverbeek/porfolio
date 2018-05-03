@@ -4,9 +4,11 @@
     <h1>{{ case.title }}</h1>
     <p>{{ case.description }}</p>
 
-    <ul class="navigation navigation--big">
-        <li><a href="#prototype">Check out the prototype</a></li>
-    </ul>
+    {% if case.prototype.link %}
+        <ul class="navigation navigation--big">
+            <li><a href="#prototype">Check out the prototype</a></li>
+        </ul>
+    {% endif %}
 
     {% for chapter in case.chapters %}
         <article class="case case--detail">
