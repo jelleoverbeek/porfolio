@@ -2,73 +2,89 @@
 {% extends "components/_layout.twig" %}
 {% set title = "IMDb" %}
 
-{% set caseNav  = {
+{% set caseNav = {
     "previousText": "SpaceRace",
     "previousLink": "/spacerace",
     "nextText": "CSR Platform",
     "nextLink": "/csr",
 }%}
 
+{% set case = {
+    "title": "IMDb redesign",
+    "description": "As design and prototyping exercise I made a redesign of the current IMDb homepage. As this exercise was mostly for fun I took myself as a persona.",
+    "chapters": [{
+        "title": "Exploring movies",
+        "description": "The primary focus is on exploring movies. Hovering over a movie poster will show the trailer and a icon to add it to your watchlist.",
+        "img": "/assets/cases/imdb/imdb",
+        "imgExtension": "png",
+        "video": "/assets/cases/imdb/imdb",
+        "vidExtensions": ["webm", "mp4"]
+    }, {
+        "title": "More movies to explore",
+        "description": "To load more movies I used a pattern that a lot of users will recognize, from for example, Netflix.",
+        "img": "/assets/cases/imdb/imdb_sidescroll",
+        "imgExtension": "png",
+        "video": "/assets/cases/imdb/imdb_sidescroll",
+        "vidExtensions": ["webm", "mp4"]
+    }, {
+        "title": "Watchlist",
+        "description": "The watchlist feature is more obvious and discoverable in the new design. It should be available wherever a movie title or poster is displayed.",
+        "img": "/assets/cases/imdb/imdb_addfavs",
+        "imgExtension": "png",
+        "video": "/assets/cases/imdb/imdb_addfavs",
+        "vidExtensions": ["webm", "mp4"]
+    }],
+    "prototype": {
+        "title": "Prototype",
+        "text": "Check out the design as Framer prototype",
+        "link": "https://framer.cloud/AZmcA/",
+        "btnText": "Show me!"
+    }
+} %}
+
 {% block page %}
 
-    {% include "components/_nav.twig" %}
+{% include "components/_nav.twig" %}
 
 <section>
-    <h1>IMDb redesign</h1>
-    <p>As design and prototyping exercise I made a redesign of the current IMDb homepage. As this exercise was mostly for fun I took myself as a persona.</p>
+    <h1>{{ case.title }}</h1>
+    <p>{{ case.description }}</p>
 
     <ul class="navigation navigation--big">
         <li><a href="#prototype">Check out the prototype</a></li>
     </ul>
 
-    <article class="case case--detail">
-        <div class="case__preview">
-            <video poster="/assets/cases/imdb/imdb@2x.png" muted webkit-playsinline playsinline loop>
-                <source src="/assets/cases/imdb/imdb.webm" type="video/webm">
-                <source src="/assets/cases/imdb/imdb.mp4" type="video/mp4">
-                <img src="/assets/cases/imdb/imdb.png" srcset="/assets/cases/imdb/imdb.png 1x, /assets/cases/imdb/imdb@2x.png 2x">
-            </video>
-        </div>
-        <div class="case__content">
-            <h3>Exploring movies</h3>
-            <p>The primary focus is on exploring movies. Hovering over a movie poster will show the trailer and a icon to add it to your watchlist.</p>
-        </div>
-    </article>
+    {% for chapter in case.chapters %}
+        <article class="case case--detail">
+            <div class="case__preview">
+                {% if chapter.video %}
+                    <video poster="{{ chapter.img }}@2x.{{ chapter.imgExtension }}" muted webkit-playsinline playsinline loop>
 
-    <article class="case case--detail">
-        <div class="case__preview">
-            <video poster="/assets/cases/imdb/imdb_sidescroll@2x.png" muted webkit-playsinline playsinline loop>
-                <source src="/assets/cases/imdb/imdb_sidescroll.webm" type="video/webm">
-                <source src="/assets/cases/imdb/imdb_sidescroll.mp4" type="video/mp4">
-                <img src="/assets/cases/imdb/imdb_sidescroll.png" srcset="/assets/cases/imdb/imdb_sidescroll.png 1x, /assets/cases/imdb/imdb_sidescroll@2x.png 2x">
-            </video>
-        </div>
-        <div class="case__content">
-            <h3>More movies to explore</h3>
-            <p>To load more movies I used a pattern that a lot of users will recognize, from for example, Netflix.</p>
-        </div>
-    </article>
+                        {% for extension in chapter.vidExtensions %}
+                            <source src="{{ chapter.video }}.{{ extension }}" type="video/{{ extension }}">
+                        {% endfor %}
 
-    <article class="case case--detail">
-        <div class="case__preview">
-            <video poster="/assets/cases/imdb/imdb_addfavs@2x.png" muted webkit-playsinline playsinline loop>
-                <source src="/assets/cases/imdb/imdb_addfavs.webm" type="video/webm">
-                <source src="/assets/cases/imdb/imdb_addfavs.mp4" type="video/mp4">
-                <img src="/assets/cases/imdb/imdb_addfavs.png" srcset="/assets/cases/imdb/imdb_addfavs.png 1x, /assets/cases/imdb/imdb_addfavs@2x.png 2x">
-            </video>
-        </div>
-        <div class="case__content">
-            <h3>Watchlist</h3>
-            <p>The watchlist feature is more obvious and discoverable in the new design. It should be available wherever a movie title or poster is displayed.</p>
-        </div>
-    </article>
+                        <img src="{{ chapter.img }}.{{ chapter.imgExtension }}" srcset="{{ chapter.img }}.{{ chapter.imgExtension }} 1x, {{ chapter.img }}@2x.{{ chapter.imgExtension }} 2x">
+                    </video>
+                {% else %}
+                    <img src="{{ chapter.img }}.{{ chapter.imgExtension }}" srcset="{{ chapter.img }}.{{ chapter.imgExtension }} 1x, {{ chapter.img }}@2x.{{ chapter.imgExtension }} 2x">
+                {% endif %}
+            </div>
+            <div class="case__content">
+                <h3>{{ chapter.title }}</h3>
+                <p>{{ chapter.description }}</p>
+            </div>
+        </article>
+    {% endfor %}
 </section>
 
-<section class="section--outro" id="prototype">
-    <h2>Prototype</h2>
-    <p>Check out the design as Framer prototype</p>
-    <a class="button" href="https://framer.cloud/AZmcA/" target="_blank">Show me!</a>
-</section>
+{% if case.prototype.link %}
+    <section class="section--outro" id="prototype">
+        <h2>{{ case.prototype.title }}</h2>
+        <p>{{ case.prototype.text }}</p>
+        <a class="button" href="{{ case.prototype.link }}" target="_blank">{{ case.prototype.btnText }}</a>
+    </section>
+{% endif %}
 
 {% include "components/_case-nav.twig" with caseNav %}
 
